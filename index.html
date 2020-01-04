@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TicTacToe Game</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Wizard TicTacToe!</h1>
+
+
+    <section id="settings" class="settings-container">
+        <h3 class="settings-title">Player <span id="playerNum">1</span> choose your house:</h3>
+        
+        <form class="marker-choice" name="markerChoice">
+            <label class="markers">
+                <input type="checkbox" name="markers" value="gryffindor">
+                <img src="assets/gryffindor.png" alt="Gryffindor">
+            </label>
+            <label class="markers">
+                <input type="checkbox" name="markers" value="ravenclaw">
+                <img src="assets/ravenclaw.png" alt="Raverclaw">
+            </label>
+            <label class="markers">
+                <input type="checkbox" name="markers" value="hufflepuff">
+                <img src="assets/hufflepuff.png" alt="Hufflepuff">
+            </label>
+            <label class="markers">
+                <input type="checkbox" name="markers" value="slytherin">
+                <img src="assets/slytherin.png" alt="Slytherin">
+            </label>
+        </form>
+
+        <div id="contestants" class="contestants">
+            <span>Hufflepuff</span>
+            <span>vs</span>
+            <span>Slytherin</span>
+        </div>
+        
+        <button id="startGameBtn" class="btn" disabled>Let's Play!</button>
+    </section>
+
+    
+
+    <section id="game" class="game-container">
+
+        <div class="player-stats">
+            <div id="player1" class="player"> 
+                <span class="player-marker"></span>
+                <span class="score"></span>
+            </div>
+            <div id="player2" class="player">
+                <span class="player-marker"></span>
+                <span class="score"></span>
+            </div>
+        </div>
+
+        <div class="game-board">
+            <div class="box" data-box="0"></div>
+            <div class="box" data-box="1"></div>
+            <div class="box" data-box="2"></div>
+            <div class="box" data-box="3"></div>
+            <div class="box" data-box="4"></div>
+            <div class="box" data-box="5"></div>
+            <div class="box" data-box="6"></div>
+            <div class="box" data-box="7"></div>
+            <div class="box" data-box="8"></div>
+        </div>
+
+        <button id="newGameBtn" class="btn btn-active">New Game</button>
+    </section>
+
+    <section class="modal-container" id="modalBox">
+
+        <div class="modal-content">
+            <span id="closeBtn" class="close">&times</span>
+            <div class="gameover">
+                <h3 class="gameover-title">GAME OVER</h3>
+                <p class="gameover-text" id="gameOverText"></p>
+                <button id="playAgainBtn" class="btn btn-active">Play again</button>
+            </div>
+            
+        </div>
+
+    </section>
+    
+    <script src="initgame.js"></script>
+    <script src="playgame.js"></script>
+    <script src="btnactions.js"></script>
+</body>
+</html>
