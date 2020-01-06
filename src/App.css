@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker|Gochi+Hand');
+
+:root {
+    --bg-blue: #2574A9;
+    --game-border: 3px solid #ccc;
+    --text-color: #333;
+    --game-color: #000;
+    --font: 'Gochi Hand', cursive;
+}
+
+body {
+    background-color: var(--bg-blue);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    color: var(--text-color);
+}
+
+.game-board {
+    background-color: #fff;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: .6em;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    font-family: var(--font);
+    font-size: 6em;
+    color: var(--game-color);
+}
+
+.box {
+    width: calc(33.33% - 2*3px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: var(--game-border);
+}
+
+.box:nth-child(2),
+.box:nth-child(5),
+.box:nth-child(8) {
+    border-left: var(--game-border);
+    border-right: var(--game-border);
+}
+.box:nth-child(1),
+.box:nth-child(4),
+.box:nth-child(7) {
+    border-left: var(--game-border);
+}
+.box:nth-child(3),
+.box:nth-child(6),
+.box:nth-child(9) {
+    border-right: var(--game-border);
+}
+.box:nth-child(7),
+.box:nth-child(8),
+.box:nth-child(9) {
+    border-bottom: var(--game-border);
+}
+
+.box:hover{
+    background-color: #f1c40f;
+    cursor: pointer;
+}
